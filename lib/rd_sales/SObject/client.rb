@@ -1,18 +1,22 @@
-class Client
-	attr_accessor :name, :last_name, :email, :company, :job_tile, :phone, :website, :path
+module RdSales
+	class Client
+		attr_accessor :name, :last_name, :email, :company, :job_tile, :phone, :website, :path
 
-	def initialize
-		@path = "Lead/"
+		def initialize
+			@path = "Lead/"
+		end
+
+		def to_json
+			{
+				'FirstName' => @name, 
+				'LastName'  => @last_name,
+				'Email'     => @email,
+				'Company'   => @company,
+				'Phone'     => @phone,
+				'Title'     => @job_tile,
+				'Website'   => @website
+
+			}.to_json
+		end
 	end
-
-	def to_json
-		{
-			'FirstName' => @name, 
-			'LastName' => @last_name,
-			'Email' => @email,
-			'Company' => @company
-
-		}.to_json
-	end
-	
 end
