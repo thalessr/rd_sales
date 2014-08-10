@@ -1,10 +1,6 @@
 module RdSales
 	class Client
-		attr_accessor :name, :last_name, :email, :company, :job_tile, :phone, :website, :path
-
-		def initialize
-			@path = "Lead/"
-		end
+		attr_accessor :name, :last_name, :email, :company, :job_tile, :phone, :website
 
 		def to_json
 			{
@@ -17,6 +13,10 @@ module RdSales
 				'Website'   => @website
 
 			}.to_json
+		end
+
+		def path
+			"Lead/"
 		end
 	end
 end
