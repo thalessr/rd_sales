@@ -6,7 +6,7 @@ The purpose of the gem is to integrate to SalesForce through rest api
 
 Add this line to your application's Gemfile:
 
-    gem 'rd_sales'
+    gem 'rd_sales', git: 'https://github.com/thalessr/rd_sales.git'
 
 And then execute:
 
@@ -15,6 +15,9 @@ And then execute:
 Or install it yourself as:
 
     $ gem install rd_sales
+
+##Testing
+ Run the command rake spec
 
 ## Usage
 Write the following code into your ApplicationController
